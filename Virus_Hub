@@ -88,7 +88,7 @@ Load.Text = "LOAD THE VIRUS"
 Load.TextColor3 = Color3.fromRGB(255, 255, 255)
 Load.TextSize = 20.000
 Load.MouseButton1Down:Connect(function()
-	loadstring(game:HttpGet"")()
+	loadstring(game:HttpGet"https://raw.githubusercontent.com/SeiUniVlox90/VirusHub/main/PopUp")()
 end)
 
 Logo2_2.Name = "Logo2"
