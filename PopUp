@@ -1,0 +1,57 @@
+local Virus = Instance.new("ScreenGui")
+local PopUp = Instance.new("Frame")
+local Say = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+
+Virus.Name = "Virus"
+Virus.Parent = game.CoreGui
+
+PopUp.Name = "PopUp"
+PopUp.Parent = Virus
+PopUp.BackgroundColor3 = Color3.fromRGB(0, 0, 135)
+PopUp.BorderSizePixel = 0
+PopUp.Position = UDim2.new(0.5, -176, 0.5, -88)
+PopUp.Size = UDim2.new(0, 353, 0, 176)
+PopUp.Active = true
+
+Say.Name = "Say"
+Say.Parent = PopUp
+Say.BackgroundColor3 = Color3.fromRGB(0, 33, 220)
+Say.BorderSizePixel = 0
+Say.Position = UDim2.new(0.335677028, 0, 0.797599494, 0)
+Say.Size = UDim2.new(0, 116, 0, 29)
+Say.Font = Enum.Font.FredokaOne
+Say.Text = "YES"
+Say.TextColor3 = Color3.fromRGB(255, 255, 255)
+Say.TextSize = 18.000
+
+TextLabel.Parent = PopUp
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.214526534, 0, 0.353208303, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.Gotham
+TextLabel.Text = "N/A"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+
+-- Scripts:
+
+local function NXVBJWK_fake_script() -- PopUp.LocalScript 
+	local script = Instance.new('LocalScript', PopUp)
+
+	local Button = script.Parent.Say
+	local Text = script.Parent.TextLabel
+	local Main = script.Parent
+	
+	Main.Visible = true
+	Text.Text = "Continue?"
+	
+	Button.MouseButton1Click:Connect(function()
+		Text.Text = "Destroying Gui"
+		wait(3)
+		Main.Visible = false
+    loadstring(game:HttpGet"")()
+	end)
+end
+coroutine.wrap(NXVBJWK_fake_script)()
